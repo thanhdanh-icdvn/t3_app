@@ -1,14 +1,12 @@
 import { unstable_noStore as noStore } from "next/cache";
 import Link from "next/link";
 
-import { getServerAuthSession } from "@/server/auth";
-
-import { api } from "@/trpc/server";
-
 import { CreatePost } from "@/app/_components/create-post";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { getServerAuthSession } from "@/server/auth";
+import { api } from "@/trpc/server";
 
 export default async function Home() {
   noStore();
@@ -16,7 +14,7 @@ export default async function Home() {
   const session = await getServerAuthSession();
 
   return (
-    <main className="text-foreground bg-background flex min-h-screen flex-col items-center justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-background text-foreground">
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
         <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
           Create <span className="text-[hsl(280,100%,70%)]">T3</span> App

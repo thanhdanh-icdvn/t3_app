@@ -1,10 +1,10 @@
-import ThemeProvider from "./providers/theme-provider";
-import { Inter as FontSans } from "next/font/google";
 import { type PropsWithChildren } from "react";
+import { Inter as FontSans } from "next/font/google";
 
 import { cn } from "@/lib/utils";
-
 import { TRPCReactProvider } from "@/trpc/react";
+
+import ThemeProvider from "./providers/theme-provider";
 
 import "@/styles/globals.css";
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >

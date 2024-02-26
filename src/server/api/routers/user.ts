@@ -1,7 +1,7 @@
-import { loginSchema, signUpSchema } from "@/common/validation/auth";
 import bcrypt from "bcrypt";
-
 import { TRPCError } from "@trpc/server";
+
+import { loginSchema, signUpSchema } from "@/common/validation/auth";
 
 import { createTRPCRouter, publicProcedure } from "../trpc";
 

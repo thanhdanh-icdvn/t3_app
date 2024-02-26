@@ -1,15 +1,16 @@
-import { type TLogin } from "@/common/validation/auth";
 import React from "react";
 import { useForm } from "react-hook-form";
+
+import { type TLogin } from "@/common/validation/auth";
 
 import { Button } from "../ui/button";
 import {
   Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
 } from "../ui/card";
 import {
   Form,
