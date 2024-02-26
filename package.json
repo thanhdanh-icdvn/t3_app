@@ -9,7 +9,8 @@
     "db:studio": "prisma studio",
     "dev": "next dev",
     "postinstall": "prisma generate",
-    "lint": "next lint",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
     "format": "npx prettier --write ./src",
     "start": "next start"
   },
