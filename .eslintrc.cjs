@@ -1,17 +1,26 @@
 /** @type {import("eslint").Linter.Config} */
 const config = {
+  root: true,
+  env: {
+    browser: true,
+  },
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: true,
   },
-  plugins: ["@typescript-eslint", "simple-import-sort"],
+  plugins: ["react", "@typescript-eslint", "simple-import-sort"],
   extends: [
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:react/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
+  ignorePatterns: ["src/**/*.test.ts"],
   rules: {
+    "react/prop-types": "off",
+    "no-console": "error",
+    eqeqeq: "warn",
     // These opinionated rules are enabled in stylistic-type-checked above.
     // Feel free to reconfigure them to your own preference.
     "@typescript-eslint/array-type": "off",
