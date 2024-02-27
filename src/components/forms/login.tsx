@@ -1,9 +1,9 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React from 'react'
+import { useForm } from 'react-hook-form'
 
-import { type TLogin } from "@/common/validation/auth";
+import { type TLogin } from '@/common/validation/auth'
 
-import { Button } from "../ui/button";
+import { Button } from '../ui/button'
 import {
   Card,
   CardContent,
@@ -11,7 +11,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from '../ui/card'
 import {
   Form,
   FormControl,
@@ -19,11 +19,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
-import { Input } from "../ui/input";
+} from '../ui/form'
+import { Input } from '../ui/input'
 
 export default function LoginForm() {
-  const loginForm = useForm<TLogin>({});
+  const loginForm = useForm<TLogin>({})
   return (
     <Card>
       <CardHeader>
@@ -68,5 +68,5 @@ export default function LoginForm() {
         <Button className="w-full">Login</Button>
       </CardFooter>
     </Card>
-  );
+  )
 }

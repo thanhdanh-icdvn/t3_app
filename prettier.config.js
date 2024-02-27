@@ -2,6 +2,9 @@
 const config = {
   plugins: ["prettier-plugin-tailwindcss"],
   tabWidth: 2,
+  singleQuote: true,
+  trailingComma: "es5",
+  semi: false,
   endOfLine: "lf",
 };
 
